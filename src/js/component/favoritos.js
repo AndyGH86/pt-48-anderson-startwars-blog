@@ -1,21 +1,20 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import { useParams } from "react-router-dom";
 
 
 const Favoritos = () => {
   const { store, actions } = useContext(Context)
-  const params = useParams()
+  
 
   return (
     <div className="row">
       {store.favoritos.map((fav, index) => {
-        console.log("-----",fav);
+        
         return (
           <div className="card favorite" key={index} style={{ "width": "18rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/${fav.type}/${fav.uid}.jpg`}
               onError={({ currentTarget }) => {
-                currentTarget.onerror = null; // prevents looping
+                currentTarget.onerror = null; 
                 currentTarget.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
               }}
               className="card-image" alt="..." />

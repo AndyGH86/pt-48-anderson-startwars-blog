@@ -13,7 +13,7 @@ const Naves = () => {
           <div className="card vehicle" key={index} style={{ "width": "18rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/vehicles/${value.uid}.jpg`}
               onError={({ currentTarget }) => {
-                currentTarget.onerror = null; // prevents looping
+                currentTarget.onerror = null; 
                 currentTarget.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
               }}
               className="card-image" alt="..." />

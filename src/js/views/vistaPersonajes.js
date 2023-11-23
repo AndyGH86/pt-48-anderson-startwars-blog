@@ -5,7 +5,7 @@ import Personajes from "../component/personajes.jsx";
 const VistaPersonajes = () => (
 
     <>
-    < Personajes />
+    <Personajes />
     </>
     )
 
