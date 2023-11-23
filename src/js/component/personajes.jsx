@@ -13,8 +13,7 @@ const Personajes = () => {
           <div className="card people" key={index} style={{ "width": "18rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/characters/${value.uid}.jpg`}
               onError={({ currentTarget }) => {
-                currentTarget.onerror = null;
-
+                currentTarget.onerror = null; // prevents looping
                 currentTarget.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
               }}
               className="card-image" alt="..." />
@@ -22,7 +21,7 @@ const Personajes = () => {
               <h4 className="card-title">{value.name}</h4>
               <div className="read">
                 <Link to={`/personaje/${value.uid}`}>
-                  <button className="btnread">Saber Mas</button>
+                  <button className="btnread">Read More</button>
                 </Link>
                 <button className="fav" onClick={() => actions.getFavorito(value)} ><i class="fas fa-star"></i></button>
               </div>

@@ -31,6 +31,9 @@ export const Navbar = () => {
               <Link to="/naves">
                 <span className="title btn ">Naves</span>
               </Link>
+              <Link to="/especies">
+                <span className="title btn ">Especies</span>
+              </Link>
               <Link to="/favoritos">
                 <span className="title btn ">
                   Favoritos {store.favoritos.length}

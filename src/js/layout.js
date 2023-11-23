@@ -10,9 +10,11 @@ import { Footer } from "./component/footer";
 import Personaje from "./component/personaje.jsx";
 import Planeta from "./component/planeta.jsx";
 import Nave from "./component/nave.jsx";
+import Especie from "./component/especie.jsx";
 import Personajes from "./component/personajes.jsx";
 import Planetas from "./component/planetas.jsx";
 import Naves from "./component/naves.jsx";
+import Especies from "./component/esepcies.jsx";
 import Favorito from "./component/favoritos.js";
 
 
@@ -32,10 +34,12 @@ const Layout = () => {
 						<Route path="/personajes" element={<Personajes />} />
 						<Route path="/planetas" element={<Planetas />} />
 						<Route path="/naves" element={<Naves/>} />
+						<Route path="/especies" element={<Especies/>} />
 						<Route path="/favoritos" element={<Favorito/>} />
 						<Route path="/personaje/:uid" element={<Personaje />} />
 						<Route path="/planeta/:uid" element={<Planeta />} />
 						<Route path="/nave/:uid" element={<Nave />} />
+						<Route path="/especie/:uid" element={<Especie />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

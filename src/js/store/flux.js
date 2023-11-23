@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				personajes: [],
 				planetas: [],
 				naves: [],
+				especies: [],
 				favoritos: [],
 		},
 		actions: {
@@ -25,6 +26,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://www.swapi.tech/api/vehicles/")
 				  .then(resp => resp.json())
 				  .then(data => setStore({ naves: data.results }))
+				  .catch(err => console.log("No se encontro la informacion", err))
+			  },
+			  fetchEspecies: () => {
+				fetch("https://www.swapi.tech/api/species/")
+				  .then(resp => resp.json())
+				  .then(data => setStore({ especies: data.results }))
 				  .catch(err => console.log("No se encontro la informacion", err))
 			  },
 		 

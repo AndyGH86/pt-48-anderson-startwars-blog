@@ -34,6 +34,7 @@ const injectContext = PassedComponent => {
 			state.actions.fetchPersonajes();
 			state.actions.fetchPlanetas();
 			state.actions.fetchNaves();
+			state.actions.fetchEspecies();
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

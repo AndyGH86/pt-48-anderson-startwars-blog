@@ -18,7 +18,7 @@ const Planeta = () => {
         <div className="image">
           <img src={`https://starwars-visualguide.com/assets/img/planets/${params.uid}.jpg`}
             onError={({ currentTarget }) => {
-              currentTarget.onerror = null; // prevents looping
+              currentTarget.onerror = null; 
               currentTarget.src = "https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357";
             }} className="card-image" />
         </div>
