@@ -3,12 +3,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Personaje from "./component/personaje.jsx";
+import Planeta from "./component/planeta.jsx";
+import Nave from "./component/nave.jsx";
+import Personajes from "./component/personajes.jsx";
+import Planetas from "./component/planetas.jsx";
+import Naves from "./component/naves.jsx";
+import Favorito from "./component/favoritos.js";
+
 
 //create your first component
 const Layout = () => {
@@ -23,8 +29,13 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/personajes" element={<Personajes />} />
+						<Route path="/planetas" element={<Planetas />} />
+						<Route path="/naves" element={<Naves/>} />
+						<Route path="/favoritos" element={<Favorito/>} />
+						<Route path="/personaje/:uid" element={<Personaje />} />
+						<Route path="/planeta/:uid" element={<Planeta />} />
+						<Route path="/nave/:uid" element={<Nave />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

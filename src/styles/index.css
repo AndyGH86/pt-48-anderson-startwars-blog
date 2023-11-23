@@ -1,3 +1,194 @@
 /* 
     General Styles
 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  .contnav {
+    display: flex;
+    flex-direction: column;
+  }
+  .imgNav {
+    width: 11.5rem;
+    height: 5rem;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .Titulos {
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+  
+  .title {
+    margin: 0 1.5rem 0 auto;
+    color: white;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    border-radius: 100vmax;
+    border: 2px solid rgb(180, 178, 178);
+    padding: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    text-shadow: 0 0 1rem rgb(158, 158, 100);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, .20);
+    text-align: center;
+    transition: 0.2s;
+  }
+  @media (max-width: 320px) {
+    .title {
+      width: 100%; /* Cambia el ancho a 100% para que se coloquen dos elementos por fila */
+    }
+  }
+  .row{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .title:hover {
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(255, 255, 255, .20);
+  }
+  .card {
+   margin: 1rem auto 1rem;
+   border: none;
+   background: none;
+   /*box-shadow: 0 0 3rem -1rem rgb(93, 93, 93);*/
+  }
+  .card-image{
+    width: 250px;
+    height: 250px;
+    max-width: 15rem;
+    border: 1px solid rgb(0 0 0 .2);
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 3rem -1rem rgb(128, 128, 128);
+  }
+  .card-body{
+    text-align: center;
+  }
+  h4{
+    color: rgb(48, 48, 45);
+    margin: .4rem;
+    -webkit-text-stroke: .3px white;
+    font-weight: 200;
+  }
+  .containerInfo {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 2em 4em;
+  }
+  .read{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+  }
+  .btnread{
+    color: white;
+    background-color: transparent;
+    padding: .4rem;
+    border: 1px solid rgb(111, 111, 67);
+    border-radius: 2rem;
+    text-decoration: none;
+    outline: none;
+    text-transform: uppercase;
+  }
+  .btnread:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, .20);
+  }
+  .fav{
+    background-color: black;
+    border: none;
+  }
+  .fas{
+    color: yellow;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler{
+    background-color: white;
+  }
+  .navbar-toggler-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .fa fa-bars{
+    font-size: small;
+  }
+  .name-info{
+    color: rgb(48, 48, 45);
+    margin: .2rem;
+    -webkit-text-stroke: .3px white;
+    font-weight: 200;
+    font-size: 3rem;
+  }
+  .Info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  .properties{
+    width: 100%;
+    background-color: transparent;
+    text-align: justify;
+  }
+  .list-group-item{
+    background-color: transparent;
+    font-size: 1.5rem;
+    -webkit-text-stroke: .3px rgb(248, 237, 118);
+    color: black;
+    font-weight: 300;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    font-size: .8rem;
+    margin-top: auto;
+  }
+  .TitulosFooter{
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .delete{
+    width: auto;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    color: rgb(190, 104, 104);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .delete:hover{
+    transform: scale(1.1);
+  }
+  .carousel-inner{
+    margin: 3em auto 4em;
+    transition-duration: 100ms;
+  }/* 
+    General Styles
+*/

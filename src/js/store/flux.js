@@ -11,33 +11,47 @@ const getState = ({ getStore, getActions, setStore }) => {
 					title: "SECOND",
 					background: "white",
 					initial: "white"
-				}
-			]
+				},
+				
+			],
+				personajes: [],
+				planetas: [],
+				naves: [],
+				favoritos: [],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
+			fetchPersonajes: () => {
+				fetch("https://www.swapi.tech/api/people/") 
+				  .then(data => setStore({ personajes: data.results }))
+				  .catch(err => console.log("No se encontro la informacion", err))
+			  },
+		//Planet
+			  fetchPlanetas: () => {
+				fetch("https://www.swapi.tech/api/planets/")
+				  .then(resp => resp.json())
+				  .then(data => setStore({planetas: data.results}))
+				  .catch(err => console.log("No se encontro la informacion", err))
+			  },
+		//Vehicle
+			  fetchNaves: () => {
+				fetch("https://www.swapi.tech/api/vehicles/")
+				  .then(resp => resp.json())
+				  .then(data => setStore({ naves: data.results }))
+				  .catch(err => console.log("No se encontro la informacion", err))
+			  },
+		//Funcion favorito, guarda la info del componenete que se seleccione 
+			  getFavorito: (data) => {
 				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
+				if (!store.favoritos.includes(data)) {
+				  setStore({ favoritos: [...store.favoritos, data] })
+				}
+			  },
+		// Funcion eliminar, elimina el componente favorito que se seleccione      
+			  deleteFavorito: (data) => {
+				const store = getStore();
+				const favorite = store.favoritos.filter(favorito => favorito !== data);
+				setStore({ favoritos: favorite });
+			  }
 		}
 	};
 };
