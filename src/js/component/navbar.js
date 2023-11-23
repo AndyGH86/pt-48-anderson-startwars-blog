@@ -22,11 +22,11 @@ export const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <div className="Titulos">
-              <Link to="/personajes">
-                <span className="title btn ">Personajes</span>
-              </Link>
               <Link to="/planetas">
                 <span className="title btn ">Planetas</span>
+              </Link>
+              <Link to="/personajes">
+                <span className="title btn ">Personajes</span>
               </Link>
               <Link to="/naves">
                 <span className="title btn ">Naves</span>
