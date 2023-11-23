@@ -11,7 +11,7 @@ import Personaje from "./component/personaje.jsx";
 import Planeta from "./component/planeta.jsx";
 import Nave from "./component/nave.jsx";
 import Especie from "./component/especie.jsx";
-import Personajes from "./component/personajes.jsx";
+import Personajes from "./component/personajes.js";
 import Planetas from "./component/planetas.jsx";
 import Naves from "./component/naves.jsx";
 import Especies from "./component/esepcies.jsx";

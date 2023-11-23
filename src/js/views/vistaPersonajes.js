@@ -1,5 +1,5 @@
 import React from "react";
-import Personajes from "../component/personajes.jsx";
+import Personajes from "../component/personajes.js";
 
 
 const VistaPersonajes = () => (
