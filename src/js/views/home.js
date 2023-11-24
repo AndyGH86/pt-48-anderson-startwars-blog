@@ -21,6 +21,9 @@ export const Home = () => {
           <img src='https://i.blogs.es/e36113/yoda/1024_2000.jpg' className="img-fluid d-block w-100" alt="nave" />
         </div>
         <div className="carousel-item">
+          <img src='https://pm1.aminoapps.com/6343/a6d695eb2d64cc011a5bef61eb2daed310b6f3fc_hq.jpg' className="img-fluid d-block w-100" alt="nave" />
+        </div>
+        <div className="carousel-item">
           <img src='https://estaticos-cdn.prensaiberica.es/clip/89987d8b-55f4-4dd1-b181-633cb78ac390_alta-libre-aspect-ratio_default_0.jpg' className="img-fluid d-block w-100" alt="nave" />
         </div>
       </div>
