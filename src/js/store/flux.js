@@ -11,6 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			fetchPersonajes: () => {
 				fetch("https://www.swapi.tech/api/people/") 
+				  .then(resp => resp.json())
 				  .then(data => setStore({ personajes: data.results }))
 				  .catch(err => console.log("No se encontro la informacion", err))
 			  },
